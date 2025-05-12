@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
+import { getAssetPath } from "@/lib/utils";
 
 import { PinContainer } from "./ui/3d-pin";
 
@@ -27,7 +28,7 @@ export const RecentProjects = () => {
                     <Image
                       height={330}
                       width={552}
-                      src="/bg.png"
+                      src={getAssetPath("/bg.png")}
                       alt="bg-img"
                     />
                   </div>
@@ -36,7 +37,7 @@ export const RecentProjects = () => {
                     <Image
                       height={340}
                       width={340}
-                      src={img}
+                      src={getAssetPath(img)}
                       alt={title}
                       className="absolute z-10 object-contain"
                       style={{ 
@@ -49,7 +50,7 @@ export const RecentProjects = () => {
                     <Image
                       height={300}
                       width={464}
-                      src={img}
+                      src={getAssetPath(img)}
                       alt={title}
                       className="absolute bottom-0 z-10"
                     />
@@ -77,7 +78,7 @@ export const RecentProjects = () => {
                         <Image
                           height={40}
                           width={40}
-                          src={icon}
+                          src={getAssetPath(icon)}
                           alt={icon}
                           className="p-2"
                         />
