@@ -10,7 +10,7 @@ import { PinContainer } from "./ui/3d-pin";
 export const RecentProjects = () => {
   return (
     <section id="projects" className="section-spacing">
-      <h1 className="heading-rye mb-8 lg:mb-4 lg:-mt-5">
+      <h1 className="heading-rye mb-24">
         O selecție de{" "}
         <span className="text-purple">proiecte recente</span>
       </h1>
@@ -106,4 +106,4 @@ export const RecentProjects = () => {
       </div>
     </section>
   );
-};
+}; 
