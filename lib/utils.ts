@@ -12,11 +12,7 @@ export function getAssetPath(path: string): string {
   // Remove leading slash if present to avoid double slashes
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   
-  // For production on GitHub Pages, use the /portv2 prefix
-  // For development, use no prefix
-  const basePath = typeof window !== 'undefined' && window.location.hostname !== 'localhost' 
-    ? '/portv2' 
-    : '';
-  
-  return `${basePath}/${cleanPath}`;
+  // Always use the /portv2 prefix for GitHub Pages
+  // This is simpler and more reliable than trying to detect the environment
+  return `/portv2/${cleanPath}`;
 }

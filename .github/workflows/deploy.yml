@@ -33,8 +33,12 @@ jobs:
       - name: Build with Next.js
         run: |
           npm run build
+          # Copy public assets to out/portv2/ directory for GitHub Pages
+          mkdir -p out/portv2
+          cp -r public/* out/portv2/
           echo "Build completed"
           ls -la out/
+          ls -la out/portv2/ || echo "portv2 dir not found"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
